@@ -1,10 +1,10 @@
 title: "AOE2: Empire Forge"
 description: "Design custom civilizations for Age of Empires II: Definitive Edition and build them into a playable mod. Free, open source, and it runs on your own PC."
 
-# GitHub Pages project site: https://napkingcole.github.io/empire-forge/
-# If the repo gets a different name, change baseurl to match.
-url: "https://napkingcole.github.io"
-baseurl: "/empire-forge"
+# GitHub Pages with a custom domain (the CNAME file).  The old
+# napkingcole.github.io/empire-forge/ address redirects here.
+url: "https://empireforge.app"
+baseurl: ""
 
 repo_url: "https://github.com/napkingcole/aoe2-empire-forge"
 releases_url: "https://github.com/napkingcole/aoe2-empire-forge/releases/latest"
@@ -12,6 +12,8 @@ issues_url: "https://github.com/napkingcole/aoe2-empire-forge/issues"
 # Empty until the Store listing is live; the Download page shows "coming soon".
 store_url: ""
 contact_email: "aoenapkingcole@gmail.com"
+# Tip jar.  Change the service here; the footer and Download page follow.
+donate_url: "https://ko-fi.com/napkingcole"
 discord_server_url: "https://discord.gg/CEXf9R6XJ"
 discord_handle: "napkingcole84"
 discord_url: "https://discord.com/users/napkingcole84"

@@ -103,5 +103,12 @@ permalink: /download/
 
     <h2>Next</h2>
     <p>Read <a href="{{ '/how-it-works/' | relative_url }}">How It Works</a> for the full walkthrough, from first civ to installed mod.</p>
+
+    {% if site.donate_url %}
+    <div class="ef-note">
+      <p><i class="fa-solid fa-mug-hot" style="color:var(--crimson)"></i> Empire Forge is free, and always will be.
+        If it brought you some joy, you can <a href="{{ site.donate_url }}">buy me a coffee on Ko-fi</a> — entirely optional, and very much appreciated.</p>
+    </div>
+    {% endif %}
   </div>
 </section>

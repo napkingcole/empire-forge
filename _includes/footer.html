@@ -5,6 +5,7 @@
     <a href="mailto:{{ site.contact_email }}"><i class="fa-solid fa-envelope"></i>{{ site.contact_email }}</a>
     <a href="{{ '/faq/' | relative_url }}"><i class="fa-solid fa-circle-question"></i>Support</a>
     <a href="{{ '/privacy/' | relative_url }}"><i class="fa-solid fa-shield-halved"></i>Privacy</a>
+    {% if site.donate_url %}<a href="{{ site.donate_url }}"><i class="fa-solid fa-mug-hot"></i>Buy me a coffee</a>{% endif %}
   </div>
   <p class="ef-footer-copy">
     AOE2: Empire Forge is a free, open-source community tool, licensed under the GPL v3.
