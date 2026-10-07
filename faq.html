@@ -1,0 +1,153 @@
+---
+layout: default
+title: FAQ & Support
+description: "Answers to common Empire Forge questions: installing, launching, mods not showing, game versions, limitations, and how to get help."
+permalink: /faq/
+---
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">Support</p>
+    <h1>FAQ &amp; support</h1>
+    <p>Most problems have a one-minute fix. If yours isn't here, ask on Discord.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container narrow ef-faq">
+
+    <div class="ef-faq-group">
+      <h2>Getting started</h2>
+
+      <details>
+        <summary>Is Empire Forge free?</summary>
+        <div><p>Yes, completely. It's open source under the GPL v3, with no account, ads or paid tier.</p></div>
+      </details>
+
+      <details>
+        <summary>Which versions of the game does it work with?</summary>
+        <div>
+          <p>Age of Empires II: Definitive Edition on Windows, from <strong>Steam</strong> or <strong>PC Game Pass / the Microsoft Store</strong>. Mods work the same way in both.</p>
+          <p>The Xbox and PlayStation versions only allow official mods, so they can't load Empire Forge mods. The older HD and original editions aren't supported.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do I need Python or any modding tools?</summary>
+        <div><p>No. The download is a single program with everything inside it. You only need the game installed on the same PC.</p></div>
+      </details>
+
+      <details>
+        <summary>Does it change my game files?</summary>
+        <div><p>Never. Empire Forge only <em>reads</em> your game files, and writes a separate mod. Turn the mod off (or delete it) and the game is exactly as it was.</p></div>
+      </details>
+
+      <details>
+        <summary>Can I play my civs online with friends?</summary>
+        <div><p>Yes — everyone in the lobby needs the same mod installed and enabled. Share the mod zip, or share your <code>.civbuilder.json</code> files so friends can build it themselves. You can also publish a mod through the game's own mod site.</p></div>
+      </details>
+
+      <details>
+        <summary>Can I import civs from KrakenMeister's builder?</summary>
+        <div><p>Yes. On the Build Civ page, choose <strong>Convert KM Civ</strong>, then keep editing the result in the wizard.</p></div>
+      </details>
+    </div>
+
+    <div class="ef-faq-group">
+      <h2>Launching the app</h2>
+
+      <details>
+        <summary>Windows says "Windows protected your PC"</summary>
+        <div><p>That's SmartScreen, which warns about any program it hasn't seen many times before. Click <strong>More info</strong>, then <strong>Run anyway</strong>. <a href="{{ '/download/#smartscreen' | relative_url }}">Why the warning appears</a>.</p></div>
+      </details>
+
+      <details id="nothing-happens">
+        <summary>I double-click it and nothing happens</summary>
+        <div>
+          <p>Work through these in order:</p>
+          <ol>
+            <li><strong>Antivirus.</strong> Some antivirus tools quietly quarantine new programs, and running as administrator doesn't help. In Windows Security, check <strong>Protection history</strong> and restore the file if it's there.</li>
+            <li><strong>Run it from a terminal</strong> so any error stays on screen: open PowerShell in your Downloads folder and run <code>.\AOE2EmpireForge.exe</code>. Post what it says on Discord.</li>
+            <li><strong>The browser didn't open.</strong> The console shows the address it's running on (usually <code>http://127.0.0.1:8080</code>) — open it in your browser yourself.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>It says it can't find my game</summary>
+        <div>
+          <p>Empire Forge looks in the usual Steam and Xbox app install folders. If your game is somewhere else — another drive, or a custom library — paste the path to <code>empires2_x2_p1.dat</code> on the upload page. It's inside your game folder at <code>resources\_common\dat\</code>.</p>
+          <p>In Steam: right-click the game → <strong>Manage</strong> → <strong>Browse local files</strong> to find the game folder.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Where are my civs and custom bonuses saved?</summary>
+        <div>
+          <p>Civs in progress are saved in your browser as you work, and as <code>.civbuilder.json</code> files wherever you save them. Your custom bonus library is in <code>%APPDATA%\EmpireForge</code>.</p>
+          <p>Keep the <code>.civbuilder.json</code> files — they're your civs. A new version of Empire Forge can always rebuild a mod from them.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="ef-faq-group">
+      <h2>In the game</h2>
+
+      <details>
+        <summary>My civs play correctly but show the wrong names or descriptions</summary>
+        <div><p>The UI mod isn't winning. In the game's mod menu, <strong>raise the UI mod's priority</strong> — even when it's the only mod you have enabled. Both the data mod and the UI mod must be active together.</p></div>
+      </details>
+
+      <details>
+        <summary>My mod doesn't show up in the game</summary>
+        <div><p>Check that each zip was unzipped into its own folder directly inside <code>mods\local\</code> (not a folder within a folder), then restart the game. The full path is on the <a href="{{ '/how-it-works/' | relative_url }}">How It Works</a> page.</p></div>
+      </details>
+
+      <details>
+        <summary>The game crashes on startup with my mod</summary>
+        <div><p>The most common cause is a very large civ: the game refuses to load if the tech tree or team bonus holds more than about 189 changes. The build log warns you when you're close. Switch fewer tech-tree nodes off or take fewer team bonuses, rebuild, and try again. If that isn't it, post your <code>.civbuilder.json</code> on Discord.</p></div>
+      </details>
+
+      <details>
+        <summary>A game update came out — do I need to rebuild?</summary>
+        <div><p>Usually, yes: rebuild your mod after a major patch or DLC, so it's made from the new game data. Your civ files don't change; the same Empire Forge reads the updated game.</p></div>
+      </details>
+    </div>
+
+    <div class="ef-faq-group" id="limitations">
+      <h2>What Empire Forge can't do</h2>
+
+      <details>
+        <summary>Can I add a new civ instead of replacing one?</summary>
+        <div><p>No — each custom civ takes over an existing civ's slot, which you choose when you build. The Chronicles civs (Achaemenids, Athenians, Spartans, Macedonians, Thracians, Puru) can't be replaced, but their bonuses that work with ordinary units are available as cards.</p></div>
+      </details>
+
+      <details>
+        <summary>Why is a bonus I remember missing?</summary>
+        <div><p>Some bonuses can't be made to work properly outside their original civ — "ignores armor", for example, is built into the game engine. Rather than ship a card that does nothing, Empire Forge leaves it out.</p></div>
+      </details>
+
+      <details>
+        <summary>Other limits set by the game engine</summary>
+        <div>
+          <ul>
+            <li>A building has 24 training buttons — two pages of twelve.</li>
+            <li>A unit can cost at most two resources.</li>
+            <li>A few unique techs are run by the game's own scripts and only partly apply to a custom civ (Coiled Serpent Array, Red Cliffs Tactics, Butalmapu).</li>
+            <li>Units can overlap in the in-game tech tree viewer (F2). It's cosmetic; they train normally.</li>
+          </ul>
+          <p>The in-app <strong>Known Limitations</strong> page has the complete, current list.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="ef-faq-group">
+      <h2>Getting help</h2>
+      <div class="ef-card">
+        <p><strong>Discord</strong> is the fastest way to get help, share civs and suggest ideas: <a href="{{ site.discord_server_url }}">join the Empire Forge server</a>.</p>
+        <p><strong>Found a bug?</strong> Open an issue on <a href="{{ site.issues_url }}">GitHub</a>, or post it on Discord. Attaching your <code>.civbuilder.json</code> and the build log helps enormously.</p>
+        <p style="margin-bottom:0"><strong>Email:</strong> <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>

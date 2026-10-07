@@ -1,0 +1,87 @@
+---
+layout: default
+title: How It Works
+description: "How to design a civilization in Empire Forge, build it into a mod, and install it in Age of Empires II: Definitive Edition."
+permalink: /how-it-works/
+---
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">Step by step</p>
+    <h1>How it works</h1>
+    <p>From a blank civ to a skirmish against it — usually in less time than a Feudal rush.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container narrow">
+
+    <h2 class="ef-section-heading">1 · Launch the app</h2>
+    <p class="ef-section-sub">
+      Double-click <code>AOE2EmpireForge.exe</code>. A console window opens, then your browser opens Empire Forge
+      (usually at <code>http://127.0.0.1:8080</code>). It's a page served by the app on your own computer — your civs
+      and game files are never uploaded. Keep the console window open while you work; closing it quits the app.
+    </p>
+
+    <h2 class="ef-section-heading">2 · Design a civ</h2>
+    <p class="ef-section-sub">
+      Click <strong>Build Civ</strong> and step through the wizard. Every step saves as you go.
+      Already have a KrakenMeister civ? Use <strong>Convert KM Civ</strong> and keep editing it here.
+    </p>
+    <ol class="ef-wizard">
+      <li><strong>Identity</strong>Name, tagline, architecture, castle, wonder, monk, scout and voice.</li>
+      <li><strong>Bonuses</strong>Civ bonuses from the catalog or your custom library.</li>
+      <li><strong>Team Bonus</strong>The bonus your civ gives its allies.</li>
+      <li><strong>Tech Tree</strong>Every unit, building and tech, plus regional units.</li>
+      <li><strong>Unique Unit</strong>Base unit, name, cost and stat overrides.</li>
+      <li><strong>Castle UT</strong>A unique tech from the roster, or composed from effects.</li>
+      <li><strong>Imperial UT</strong>The second unique tech.</li>
+      <li><strong>Heroes</strong>Optional hero units.</li>
+      <li><strong>Review</strong>Check the summary and save your <code>.civbuilder.json</code>.</li>
+    </ol>
+
+    <h2 class="ef-section-heading" style="margin-top:3rem">3 · Build the mod</h2>
+    <p class="ef-section-sub">Go to <strong>Build Mod</strong>.</p>
+    <div class="ef-steps">
+      <div class="ef-step">
+        <div class="ef-step-num">a</div>
+        <div><h3>Upload</h3><p>Drop in one or more <code>.civbuilder.json</code> files. Empire Forge finds your game's data file (<code>empires2_x2_p1.dat</code>) automatically; if your game is somewhere unusual, paste the path.</p></div>
+      </div>
+      <div class="ef-step">
+        <div class="ef-step-num">b</div>
+        <div><h3>Configure</h3><p>Order your civs and choose which original civ each one replaces. The original is replaced in the mod only — your game files are never touched, and turning the mod off brings it back.</p></div>
+      </div>
+      <div class="ef-step">
+        <div class="ef-step-num">c</div>
+        <div><h3>Build &amp; download</h3><p>Click <strong>Build Mod</strong> and watch the log. A few seconds later you get a <code>.zip</code>. If anything about your civ needs attention, the log tells you.</p></div>
+      </div>
+    </div>
+
+    <h2 class="ef-section-heading" style="margin-top:3rem">4 · Install and play</h2>
+    <p class="ef-section-sub">The download holds two mods, and both must be active together.</p>
+    <div class="ef-steps">
+      <div class="ef-step">
+        <div class="ef-step-num">a</div>
+        <div><h3>Unzip the download</h3><p>Inside are <code>yourmod-data.zip</code> (the civs themselves) and <code>yourmod-ui.zip</code> (names, icons and text on the civ selection screen).</p></div>
+      </div>
+      <div class="ef-step">
+        <div class="ef-step-num">b</div>
+        <div><h3>Unzip both into your local mods folder</h3>
+          <p>Each into its own subfolder of:</p>
+          <p><code>C:\Users\<em>you</em>\Games\Age of Empires 2 DE\<em>your-profile-id</em>\mods\local\</code></p>
+          <p>The folder is the same for Steam and PC Game Pass.</p></div>
+      </div>
+      <div class="ef-step">
+        <div class="ef-step-num">c</div>
+        <div><h3>Enable and play</h3><p>In the game's mod manager, make sure the UI mod is enabled. When you create a skirmish, choose your mod as the data mod. Your civs appear in the slots they replaced.</p></div>
+      </div>
+    </div>
+
+    <div class="ef-note">
+      <p><strong>Civs play right but show the old names?</strong> Raise the UI mod's priority in the game's mod menu — even when it's the only mod you have enabled. More fixes are in the <a href="{{ '/faq/' | relative_url }}">FAQ</a>.</p>
+    </div>
+
+    <p style="text-align:center;margin-top:2.5rem">
+      <a class="ef-btn ef-btn-primary" href="{{ '/download/' | relative_url }}"><i class="fa-brands fa-windows"></i>Download Empire Forge</a>
+    </p>
+  </div>
+</section>

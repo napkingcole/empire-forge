@@ -1,0 +1,35 @@
+---
+layout: default
+title: Changelog
+description: "Release notes for Empire Forge."
+permalink: /changelog/
+---
+{% comment %}
+  Notes come from the app's own CHANGELOG (aoe2civbuilder/app.py), copied by
+  _scripts/sync_changelog.py — run it before publishing a release.
+{% endcomment %}
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">Release notes</p>
+    <h1>Changelog</h1>
+    <p>What's new in each version. Downloads for every release are on <a href="{{ site.repo_url }}/releases" style="color:var(--gold-light)">GitHub</a>.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container narrow">
+    {% for release in site.data.changelog %}
+    <article class="ef-release" id="v{{ release.version }}">
+      <div class="ef-release-head">
+        <h2>v{{ release.version }}</h2>
+        {% if release.date != "" %}<time datetime="{{ release.date }}">{{ release.date | date: "%-d %B %Y" }}</time>{% endif %}
+        <a href="{{ site.repo_url }}/releases/tag/v{{ release.version }}">Release page →</a>
+      </div>
+      <ul>
+        {% for note in release.notes %}<li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>

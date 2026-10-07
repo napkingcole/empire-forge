@@ -1,0 +1,76 @@
+---
+layout: default
+title: Privacy Policy
+description: "Empire Forge's privacy policy: the app runs on your computer, collects nothing, and has no accounts, analytics or tracking."
+permalink: /privacy/
+---
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">Privacy</p>
+    <h1>Privacy policy</h1>
+    <p>Short version: Empire Forge runs on your computer and collects nothing about you.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container narrow">
+    <div class="ef-card ef-prose">
+      <p><em>Effective 7 October 2026.</em> This policy covers the Empire Forge app (the GitHub download and the
+        Microsoft Store version) and this website. Empire Forge is a free, open-source hobby project by NapKingCole.</p>
+
+      <h2>What we collect</h2>
+      <p><strong>Nothing.</strong> Empire Forge has no accounts, no analytics, no telemetry, no advertising and no
+        crash reporting. The developer receives no information about you or how you use the app, and never sees your
+        civs or your game files.</p>
+
+      <h2>What the app does on your computer</h2>
+      <p>The app runs a small local web server that only your own computer can reach (<code>127.0.0.1</code>) and shows
+        its pages in your browser. While it runs, it:</p>
+      <ul>
+        <li><strong>Reads</strong> your Age of Empires II: Definitive Edition game files to build mods. It never modifies them.</li>
+        <li><strong>Saves</strong> your custom bonus library and some caches that make builds faster in
+          <code>%APPDATA%\EmpireForge</code>, and temporary build files in your Windows temp folder.</li>
+        <li><strong>Keeps</strong> civs in progress in your browser's local storage for that page, so a refresh doesn't lose your work.</li>
+      </ul>
+      <p>All of this stays on your computer. You can delete it at any time: remove the <code>EmpireForge</code> folder,
+        clear the site data for <code>127.0.0.1</code> in your browser, or uninstall the Microsoft Store version.</p>
+
+      <h2>Network requests</h2>
+      <p>Empire Forge never sends your civs, mods or game files anywhere. It does make a few ordinary web requests,
+        and the services that answer them see what any website sees — your IP address and basic browser information —
+        under their own privacy policies:</p>
+      <div class="ef-table-wrap">
+        <table class="ef-table">
+          <thead><tr><th>Request</th><th>Sent to</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td>Check whether a newer version exists</td><td>GitHub</td><td>Once per launch, <strong>GitHub download only</strong>. The Microsoft Store version doesn't check; the Store handles its updates.</td></tr>
+            <tr><td>Fonts</td><td>Google Fonts</td><td>When the app's pages load</td></tr>
+            <tr><td>Icons</td><td>Font Awesome</td><td>When the app's pages load</td></tr>
+            <tr><td>Page styling and scripts (Bootstrap)</td><td>jsDelivr</td><td>When the app's pages load</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Links in the app — to Discord, GitHub or this website — open in your browser only when you click them.</p>
+
+      <h2>This website</h2>
+      <p>This site is hosted on GitHub Pages. It sets no cookies and uses no analytics. GitHub may log visitors' IP
+        addresses for security, as described in the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.
+        Pages load fonts from Google Fonts and icons from cdnjs (Cloudflare).</p>
+
+      <h2>Contacting us</h2>
+      <p>If you email us or post on Discord or GitHub, we see what you choose to send, and use it only to reply and fix
+        problems. We don't sell or share it.</p>
+
+      <h2>Children</h2>
+      <p>Empire Forge collects no personal information from anyone, including children.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new effective date. The source code
+        for both the app and this site is public, so any change to what the app does is visible on
+        <a href="{{ site.repo_url }}">GitHub</a>.</p>
+
+      <h2>Contact</h2>
+      <p style="margin-bottom:0">Questions about privacy: <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+    </div>
+  </div>
+</section>

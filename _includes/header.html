@@ -1,0 +1,13 @@
+{% assign nav = "Features|/features/,How It Works|/how-it-works/,Download|/download/,FAQ|/faq/,Changelog|/changelog/,Why|/why/" | split: "," %}
+<nav class="ef-nav" aria-label="Main">
+  <div class="ef-nav-inner">
+    <a href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo-horz-lg.png' | relative_url }}" alt="AOE2: Empire Forge — home" class="ef-logo" width="96" height="40"></a>
+    <button class="ef-nav-toggle" type="button" aria-expanded="false" aria-controls="ef-nav-links" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <div class="ef-nav-links" id="ef-nav-links">
+      {% for item in nav %}{% assign parts = item | split: "|" %}
+      <a href="{{ parts[1] | relative_url }}"{% if page.url == parts[1] %} class="active" aria-current="page"{% endif %}>{{ parts[0] }}</a>
+      {% endfor %}
+    </div>
+    <a href="{{ '/download/' | relative_url }}" class="ef-btn ef-btn-primary ef-nav-cta"><i class="fa-brands fa-windows"></i>Download</a>
+  </div>
+</nav>

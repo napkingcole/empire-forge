@@ -1,0 +1,79 @@
+---
+layout: default
+title: Why It Exists
+description: "The story behind Empire Forge — why KrakenMeister's civ builder broke, and what Empire Forge does differently."
+permalink: /why/
+---
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">The backstory</p>
+    <h1>Why make this?</h1>
+    <p>How a DLC broke a beloved tool — and what came next.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container narrow">
+    <div class="ef-card ef-prose">
+
+      <h2 style="margin-top:0">KrakenMeister's civ builder stopped working</h2>
+      <p>KrakenMeister's civ builder is an awesome tool, but it was built against a snapshot of an older version of the
+        game's data file. Every unit, tech, building and string in AoE2:DE lives inside a binary file called
+        <code>empires2_x2_p1.dat</code>. KrakenMeister's system baked in assumptions about that file — which ID slots
+        were empty, which ranges of string IDs were safe to use — based on the game as it existed when it was written.
+        DLC updates kept being released (thankfully), and those assumptions stopped being true.</p>
+
+      <h2>The South American biome collision</h2>
+      <p>The most visible breakage came from The Last Chieftains DLC. That update added new environmental units —
+        herdable animals, huntable animals, predators, berry varieties, terrain objects — and the game assigned them
+        fresh unit IDs in ranges that happened to overlap with the spare slots KrakenMeister used for custom unique
+        units. Maps that worked fine before the DLC would suddenly spawn the wrong thing entirely: instead of berries,
+        herdables, huntables and predators, you'd get patches of neutral (Gaia) unique units. That's the nature of
+        working within a set of previously free slots — each time a DLC adds units, the builder needs patching.</p>
+
+      <h2>The idea</h2>
+      <p>I used KrakenMeister's civ builder to build all of my custom civs. My brother and I would use these OP civs to
+        beat up on as many extreme AIs as we could stand. Eventually I started editing the dat file directly — not with
+        the AGE editor, but with Python — so that when the game was patched I could simply rerun the script to
+        regenerate my mod. When I wanted more elaborate and crazy civs, I brought in AI: new unique units, aura effects,
+        multiple technologies and bonuses, you name it.</p>
+      <p>We mainly played on Amazon Tunnel against multiple AIs, which is how I found the problem: six Gaia unique
+        units instead of berries, four or five instead of capybaras. I wrote a script to patch my mod, and my pipeline
+        became: build civs in KrakenMeister's builder, combine them with the vanilla civs, generate the mod, download it,
+        apply my own changes, then apply a band-aid DLC fix. It was getting complicated — and after all that editing, I
+        was already part of the way to a new civ builder.</p>
+      <p>What really galvanized the decision was a message in the KrakenMeister Discord: someone had worked with Claude
+        to make a working civ builder in a few hours — nothing fancy, just some dropdowns for bonuses and techs. I reached
+        out, and after days and days… nothing. There was only one thing left to do.</p>
+
+      <h2>What Empire Forge does differently</h2>
+      <p><strong>Zero assumptions about the state of the game.</strong> Empire Forge reads your installed game files every
+        time you build. Rather than relying on a snapshot, it loads the real dat file from your machine and uses only
+        what is confirmed empty or safe in <em>your</em> version of the game:</p>
+      <ul>
+        <li><strong>Unit slots</strong> are verified by scanning every civ in your live dat before anything is written — if a slot isn't actually free, it isn't used.</li>
+        <li><strong>String IDs</strong> come from a pool checked at build time against what your game actually uses.</li>
+        <li><strong>Civilizations</strong> are read from your local game files, so there's never a civ mismatch.</li>
+        <li><strong>Chronicles civs</strong> are detected and left alone automatically, including any added by future DLCs.</li>
+        <li><strong>Voices</strong> are read straight from your game's own audio files.</li>
+      </ul>
+
+      <h2>Future-proof</h2>
+      <p>Empire Forge isn't hosted on a web server. The pages you use are served by the app on your own computer, for two reasons:</p>
+      <ol>
+        <li><strong>No centralized data or website:</strong> no downtime, no outages, no dependency on me or my build tools — it's always available.</li>
+        <li>I'm cheap. 🙂 But mostly number one.</li>
+      </ol>
+
+      <h2>In case of emergency, break glass</h2>
+      <p>All of the code is free on <a href="{{ site.repo_url }}">GitHub</a>. Should I ever stop updating it, <em>you</em>
+        can download the code and run your own Empire Forge. Don't know how to code? The repository includes an
+        <code>llm/</code> folder — everything learned about AoE2's data file over months of building this, written for
+        an AI coding assistant. Point your coding agent of choice at it, and that should be enough to get you there.</p>
+    </div>
+
+    <p style="text-align:center;margin-top:2.5rem">
+      <a class="ef-btn ef-btn-primary" href="{{ '/download/' | relative_url }}"><i class="fa-brands fa-windows"></i>Download Empire Forge</a>
+    </p>
+  </div>
+</section>

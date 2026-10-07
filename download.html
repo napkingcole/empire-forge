@@ -1,0 +1,107 @@
+---
+layout: default
+title: Download
+description: "Download Empire Forge for Windows — free and open source. Requirements, first-launch help and what to expect."
+permalink: /download/
+---
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">Free &amp; open source</p>
+    <h1>Download Empire Forge</h1>
+    <p>One file, nothing to install. It needs only Age of Empires II: Definitive Edition on the same PC.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container">
+    <div class="ef-dl-grid">
+
+      <div class="ef-dl-card featured">
+        <span class="ef-badge">Recommended today</span>
+        <h2><i class="fa-brands fa-github"></i>GitHub release</h2>
+        <p>The latest version as a single <code>AOE2EmpireForge.exe</code>. No installer — download it and double-click.</p>
+        <ul>
+          <li>Always the newest release, usually the same day</li>
+          <li>The app tells you when a newer version is out</li>
+          <li>Windows shows a SmartScreen warning the first time — <a href="#smartscreen">here's why and what to click</a></li>
+        </ul>
+        <a class="ef-btn ef-btn-primary" href="{{ site.releases_url }}"><i class="fa-solid fa-download"></i>Download from GitHub</a>
+      </div>
+
+      <div class="ef-dl-card">
+        {% if site.store_url != "" %}
+        <span class="ef-badge">No warnings</span>
+        {% else %}
+        <span class="ef-badge">Coming soon</span>
+        {% endif %}
+        <h2><i class="fa-brands fa-microsoft"></i>Microsoft Store</h2>
+        <p>The same app, installed and updated by the Microsoft Store.</p>
+        <ul>
+          <li>No SmartScreen warning — Microsoft signs it</li>
+          <li>Updates arrive automatically</li>
+          <li>Uninstall from Windows Settings like any other app</li>
+        </ul>
+        {% if site.store_url != "" %}
+        <a class="ef-btn ef-btn-outline" href="{{ site.store_url }}"><i class="fa-brands fa-microsoft"></i>Get it from Microsoft</a>
+        {% else %}
+        <a class="ef-btn ef-btn-outline" aria-disabled="true"><i class="fa-regular fa-clock"></i>In certification</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ef-section-plaster">
+  <div class="ef-container narrow ef-prose">
+    <h2 id="requirements">Requirements</h2>
+    <div class="ef-table-wrap">
+      <table class="ef-table">
+        <tr><th scope="row">Windows</th><td>Windows 10 or 11, 64-bit</td></tr>
+        <tr><th scope="row">Game</th><td>Age of Empires II: Definitive Edition on <strong>Steam</strong> or <strong>PC Game Pass / Microsoft Store</strong>, installed on the same PC</td></tr>
+        <tr><th scope="row">Consoles</th><td>Not supported — the Xbox and PlayStation versions only allow official mods</td></tr>
+        <tr><th scope="row">Mac &amp; Linux</th><td>No ready-made app. The <a href="{{ site.repo_url }}">source code</a> runs with Python if you're comfortable setting that up</td></tr>
+        <tr><th scope="row">Everything else</th><td>Nothing — no Python, no modding tools, no account</td></tr>
+      </table>
+    </div>
+
+    <h2 id="smartscreen">First launch: "Windows protected your PC"</h2>
+    <p>
+      The GitHub download isn't code-signed — a certificate is a yearly cost for a free hobby project — so
+      Windows SmartScreen doesn't recognise it yet and shows a warning the first time you run it.
+      It doesn't mean anything is wrong. To continue:
+    </p>
+    <ol>
+      <li>Click <strong>More info</strong>.</li>
+      <li>Click <strong>Run anyway</strong>.</li>
+    </ol>
+    <div class="ef-figs">
+      <figure>
+        <img src="{{ '/assets/img/shots/smartscreen-warning.png' | relative_url }}" alt="SmartScreen warning with the More info link" loading="lazy" width="536" height="502">
+        <figcaption>1. Click "More info"</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/shots/smartscreen-run-anyway.png' | relative_url }}" alt="SmartScreen showing the Run anyway button" loading="lazy" width="534" height="499">
+        <figcaption>2. Click "Run anyway"</figcaption>
+      </figure>
+    </div>
+    <p>
+      Wary of running an unsigned file? That's healthy. Every line of Empire Forge is public on
+      <a href="{{ site.repo_url }}">GitHub</a>, and the exe is built from it by GitHub's own servers — you can see
+      each build in the repository's Actions tab. The Microsoft Store version, once it's out, skips this step entirely.
+    </p>
+
+    <h2>What happens when it runs</h2>
+    <p>
+      A console window opens and, a moment later, your browser opens Empire Forge. The app is a small web page
+      served from your own computer — your civs and your game files never leave it. Close the console window to quit.
+    </p>
+    <div class="ef-note">
+      <p><strong>Clicked it and nothing happened?</strong> Your antivirus may have quietly quarantined it. See
+        <a href="{{ '/faq/#nothing-happens' | relative_url }}">the FAQ</a> for the fix.</p>
+    </div>
+
+    <h2>Next</h2>
+    <p>Read <a href="{{ '/how-it-works/' | relative_url }}">How It Works</a> for the full walkthrough, from first civ to installed mod.</p>
+  </div>
+</section>

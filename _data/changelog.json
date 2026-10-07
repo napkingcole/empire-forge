@@ -1,0 +1,214 @@
+[
+ {
+  "version": "2.5.1",
+  "date": "2026-10-06",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Civ bonuses not showing in the Windows app.</strong> 2.5.0 added a unit name with an accented letter (Sannāhya), and the Windows app read the bonus list in the wrong text encoding, so the whole bonus screen came up empty. Fixed — and names with accents no longer show garbled characters on Windows"
+  ]
+ },
+ {
+  "version": "2.5.0",
+  "date": "2026-10-06",
+  "notes": [
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Chronicles bonuses.</strong> Bonuses from the Chronicles civilizations that work with ordinary units and techs, marked with a helmet: cavalry also receive the infantry armor upgrades (Macedonians), siege +1 pierce armor and +30% vs. buildings, Stable technologies research 50% faster, skirmishers regenerate HP, and stone miners slowly generate food. Team bonuses: Outposts can be upgraded into arrow-firing Fortified Outposts, Barracks technologies research 50% faster, buildings +3 line of sight, Trade Carts +15% speed. <em>Thanks to Min-maxer96 and Dreams Alike for the Fortified Outpost idea</em>",
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Chronicles units</strong> under a new purple Chronicles banner: Immortal, Strategos, Hippeus, Companion Cavalry, Phalangite, Rhomphaia Warrior, Pattiyodha Longbowman, Sannāhya and Hoplite, each with its elite upgrade — plus the <strong>Scythian Horse Archer</strong>, which replaces the Cavalry Archer line",
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Palintonon</strong>: your Trebuchet takes on the Chronicles Palintonon's look and name, and hits 15% harder. Every Trebuchet upgrade still applies",
+   "<strong class=\"color-accent-2\">FASTER:</strong> <strong>Builds are much faster.</strong> After the first build, the game file loads in about a second instead of twenty, and a typical mod builds in seconds",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Picking a hero no longer takes away your Trebuchet.</strong> Heroes now train from Castle button 4, so the Trebuchet keeps its own",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Unique units and heroes get the game's full tooltip — cost with icons, description, upgrades and stats — instead of a plain line of text. An unchanged unique unit (like the Mangudai) no longer loses its tooltip, for you or for the civ it comes from",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Units the game enables the way it enables the Hearth Troop now show up correctly in the tech tree and button layout, and build warnings no longer name renamed units with stray campaign dialogue"
+  ]
+ },
+ {
+  "version": "2.4.0",
+  "date": "2026-10-02",
+  "notes": [
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Custom bonuses.</strong> Build your own bonus cards: pick a target — a group like Cavalry, a single unit, a villager job or a building — and stack as many effects as you like (\"Cavalry: +20% HP, +2 pierce armor\"). Cards are saved to your own library, can be shared as a file, and are picked into any civ like the built-in ones",
+   "<strong class=\"color-accent-2\">NEW:</strong> A <strong>Tech</strong> tab for custom bonuses: target an age, every tech at a building, an upgrade set (farm, mining, the Blacksmith lines and more), your unique techs or any single tech — and make it cheaper, faster, instant or free",
+   "<strong class=\"color-accent-2\">NEW:</strong> Your unique techs now show their descriptions on the civ selection screen, the way the game's own civs do",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Your unique techs now appear in the in-game tech tree.</strong> Since the latest game update, the tree showed the replaced civ's unique techs, crossed out, and never yours. <em>Thanks to darius_the_russian_cat</em>",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>\"Stable units +1P armor in Castle and Imperial Age\" gave melee armor instead of pierce.</strong> Fixed — and every armor card is now checked against what it says. <em>Thanks to Ping</em>",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>The Lithuanian relic bonus now powers up <em>your</em> unique unit.</strong> It used to boost the Leitis — which your civ doesn't have — so your unique unit got nothing. Ranged unique units like the Mangudai get the bonus as pierce attack, so it actually counts. <em>Thanks to trefoilknot</em>",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Multipliers on attack and armor bonuses.</strong> Raising the multiplier on an attack bonus (\"Cavalry +1 attack\" at ×2 or more) quietly applied it against the wrong armor type, so the unit's attack never went up. Very high multipliers on attack bonuses could stop the mod from building at all. Both fixed. <em>Thanks to iquit</em>",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Stacked unique techs no longer crash the game.</strong> A custom unique tech with several effects at high multipliers could grow past the game's limit and crash it before the main menu. Oversized unique techs are now split behind the scenes, and all of their effects still apply",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Working on several civs in different browser tabs.</strong> Tabs used to overwrite each other's work. Each tab now keeps its own civ, and the last one you edited still comes back when you reopen the builder. <em>Thanks to trefoilknot</em>",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Mods with several civs: a third civ with the Winged Hussar, Heavy Cavalry Archer or \"eco upgrades one age earlier\" bonus no longer loses it, imported Krakenmeister civs keep the Galleon and Fishing Lines, and units granted by bonuses (Missionary, Mounted Trebuchet, War Chariot) no longer land on a button the civ already uses",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> The Folwark works again, the Huns house bonus hides the House, the free relic bonus is fixed, quotes in your civ's text no longer break its strings, and any emblem image format is accepted",
+   "<strong class=\"color-accent-2\">CHANGED:</strong> The multiplier is hidden on seven unique techs where it never changed anything — Gothikon, Curare, Atheism, Cuman Mercenaries, Bimaristan, Coiled Serpent Array and Ordo Cavalry"
+  ]
+ },
+ {
+  "version": "2.3.1",
+  "date": "2026-09-28",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Fixed the \"both pages of the Castle are full\" warnings.</strong> Building a civ from a full tech tree warned that nearly every unique unit in the game couldn't be trained at the Castle. Those units were never yours — only your own unique unit is trained there — and the warnings are gone",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Units your civ doesn't have no longer get moved to a second page, and the <strong>Button Layout</strong> card no longer shows clashes with them"
+  ]
+ },
+ {
+  "version": "2.3.0",
+  "date": "2026-09-27",
+  "notes": [
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Every civ's voice.</strong> Thirteen civs had no voice to choose — Armenians, Georgians, Shu, Wu, Wei, Jurchens, Khitans, Muisca, Mapuche, Tupi, Saxons, Varangians and Danes. All of them are now in the Voice picker, taken straight from the game's own audio",
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Units no longer fight over a training button.</strong> Pick Eagle Warriors <em>and</em> Fire Lancers <em>and</em> Varangian Guard — the building gets a second page, just like the game's \"all techs\" mode. Every unit that moves takes its upgrades along, one row below it, with hotkeys that match the first page",
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Button Layout</strong> on the Save step. When units share a button, choose which one stays on the first page, and see both pages of each building laid out before you build",
+   "<strong class=\"color-accent-2\">CHANGED:</strong> The tech tree no longer makes you choose between units that share a building slot. Take as many as you like; the extras go to page two",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Voices in the Windows app.</strong> Mods built with the downloadable app left out the voice files, so a custom civ spoke with the voice of the civ it replaced. They are now included",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Saxon, Varangian, Dane, Muisca, Mapuche, Tupi and Khitan villagers said the same line whether building, chopping, mining or hunting. Each task now has its own line",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> A handful of voice lines played the replaced civ's voice instead of yours — most noticeably every Inca soldier line, plus some Mayan, Tatar, Slav, Persian and Aztec lines. Fixed",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> The Byzantine voice now uses the game's current, re-recorded lines",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Ticking <strong>Cranequins</strong> in the tech tree no longer drags in Parthian Tactics and the Heavy Mounted Crossbowman. It needs only the Mounted Crossbowman"
+  ]
+ },
+ {
+  "version": "2.2.1",
+  "date": "2026-09-24",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Fixed the builder hanging on \"Loading\" at startup.</strong> 2.2.0 made the wizard wait for your game files to be read before it would draw anything, which took around half a minute on a cold start and looked like a freeze. The file is now read in the background, as it was before",
+   "<em>If you downloaded 2.2.0, please update — that build cannot get past the first screen.</em>"
+  ]
+ },
+ {
+  "version": "2.2.0",
+  "date": "2026-09-23",
+  "notes": [
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Viking Sagas support.</strong> Saxons, Varangians and Danes can be replaced like any other civ, with their wonders, castles, and the new Nordic architecture and Monk",
+   "<strong class=\"color-accent-2\">NEW:</strong> <strong>Mounted Crossbowman</strong> and <strong>Varangian Guard</strong> in the tech tree. Each shares a building slot with the units it replaces — Mounted Crossbowman with the Cavalry Archer and Elephant Archer, Varangian Guard with the Fire Lancer and Eagle line — so picking one removes the others, the same way the tree has always handled regional units. <strong>Cranequins</strong> comes and goes with the Mounted Crossbowman",
+   "<strong class=\"color-accent-2\">NEW:</strong> Three unique units — <strong>Hearth Troop</strong>, <strong>Jarl</strong> and <strong>Jomsviking</strong> — and seven unique techs: Ordonnance Companies, Clerical Recruitment, Vendel Legacy, Hamask, Shield Wall, Gothikon and Northmen's Fury",
+   "<strong class=\"color-accent-2\">NEW:</strong> 12 new civ bonus cards and 3 new team bonuses, taken from the three new civs",
+   "<strong class=\"color-accent-2\">NEW:</strong> The six South American unique units finally have portraits in the picker, along with the three new ones",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Three team bonuses stopped working when the DLC landed</strong> — Genitour, the free Llama, and the Condottiero. The game moved them onto a different mechanism and emptied the old one, so the cards quietly did nothing. Fixed, and they work whether or not you have updated the game",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Five card descriptions the DLC made wrong are corrected — the Vietnamese HP bonus, the Teuton armor bonus, Longboats (now Longships), Chieftains and Wagenburg Tactics. Atheism's description now covers what it actually does",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus multipliers no longer break script-driven unique techs. Setting one to x2 could send the game looking for a completely different effect — Coiled Serpent Array was reachable this way",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Typing a DAT path by hand now tells you whether it actually worked, instead of leaving you guessing. <em>Thanks to Maruviel on Discord, whose game is on a D: drive</em>",
+   "<strong class=\"color-accent-2\">CHANGED:</strong> Empire Forge now only offers bonuses, techs and units your installed game actually has. If you have not updated yet, the new content simply is not listed — nothing in the picker is a card that cannot work",
+   "<strong class=\"color-accent-2\">CHANGED:</strong> \"Can garrison Docks with Fishing Ships\" has been retired — the game removed the Gurjaras bonus it was built from. The custom unique unit formerly called Varangian Guard is now <strong>Hetaireia</strong>, since the game now ships a real one"
+  ]
+ },
+ {
+  "version": "2.1.1",
+  "date": "2026-09-22",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>The Flemish Militia is back.</strong> It was only ever reachable as an accidental side effect of the \"Farm upgrades +125% food\" bonus. Cleaning that up in 2.1.0 removed the unit's only path — it now has its own <strong>Unlock the Flemish Militia</strong> card (Barracks, Feudal Age)",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Unique unit stats no longer disappear when you open a saved civ. Saved civs deliberately don't store your DAT path (it's specific to your PC), and the stats lookup had no fallback — so every unit's popup read \"No stats available\" while the civ still built fine",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> If your game files genuinely can't be found, the unit popup now says so and points you at Step 1, instead of blaming the units",
+   "Unlock cards are now filed under the <strong>Unlock</strong> category automatically, rather than landing under Research",
+   "<em>Thanks to Maruviel on Discord for all three reports.</em>"
+  ]
+ },
+ {
+  "version": "2.1.0",
+  "date": "2026-09-18",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Fixed a crash on game startup for civs with many team bonuses — team bonuses are merged into one effect and could exceed the engine's limit. The builder now warns you before you hit it",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Team bonuses were doing each other's jobs.</strong> An internal list drifted out of alignment in July, so hand-written team bonuses ran a different bonus entirely — \"Spearmen +3 attack vs. cavalry\" was secretly \"Unique Units +5% HP\". All re-aligned",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Reviewed every team bonus for what it actually targets and fixed 12 — some were buffing a war wagon, an ostrich, a sheep and a wild tiger. Two others did nothing at all",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Audited all 350 civ bonus cards against their real in-game effects and fixed everything that didn't match — including several that did nothing, one that secretly unlocked Flemish Militia, and several that stopped working when the unit upgraded",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus multipliers — several were making bonuses <em>weaker</em> at x2 and x3. \"Start with…\" and \"free Villager\" cards ignored the multiplier entirely",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Editing a saved civ no longer erases both of its unique techs. If you edited a civ before and its UTs stopped working, this was why — please check them",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> The civ-selection screen now shows what your unique techs do, and shows the correct team bonus",
+   "<strong class=\"color-accent-2\">NEW:</strong> 40 new bonus cards — 35 bonuses that already worked but were unreachable, plus a new \"drop off +%\" family for food, wood, stone and fishing",
+   "<strong class=\"color-accent-2\">CHANGED:</strong> 10 team bonuses and the unique unit \"Attack Ignores Armor\" option have been removed — none of them worked, and the armor option left the unit dealing 1 damage. Saved civs still load; the builder tells you what was skipped",
+   "Build messages now name units instead of listing raw ID numbers"
+  ]
+ },
+ {
+  "version": "2.0.1",
+  "date": "2026-09-06",
+  "notes": [
+   "<strong class=\"color-accent-2\">NEW:</strong> Empire Forge is now a full civilization and mod builder — design tech trees, bonuses, team bonuses, unique units, unique technologies, and hero units natively",
+   "<strong class=\"color-accent-2\">NEW:</strong> 'Convert KM Civ' tool imports existing KrakenMeister civ JSON files into the new format, so existing civs carry forward",
+   "<strong class=\"color-accent-2\">NEW:</strong> Live tech tree editor — click any unit, building, or technology to enable or disable it for your civ",
+   "<strong class=\"color-accent-2\">NEW:</strong> Bonus catalog with search and category filters",
+   "Reads your installed game's DAT file directly at build time, so new DLCs won't brick the app"
+  ]
+ },
+ {
+  "version": "1.7.4",
+  "date": "2026-07-17",
+  "notes": [
+   "<strong class=\"color-accent-2\">NEW:</strong> Microsoft Store / Xbox App installation now auto-detected — DAT file path found automatically on first launch",
+   "<strong class=\"color-accent-2\">NEW:</strong> Bonus #286 added: Can upgrade Bombard Cannons to Houfnice (properly gated behind Imperial Age even when Bonus #283 is active)",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #283 (Chemistry/HC in Castle Age) completely reworked — now truly mirrors the Bohemian mechanism (tech 800/801 cloning) so Bombard Cannons, Bombard Towers, and Cannon Galleons all work correctly alongside early Chemistry",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Anarchy / Marauders unique tech — UU now appears at the correct button slot (R key / button 4) in Barracks or Stable after the tech fires; previously overwrote the militia or cavalry line button",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #222 (Barracks techs one age earlier) no longer clones DLC/Chronicles shadow techs or techs for units not in the civ's tree, preventing unresearchable duplicate buttons",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Vanilla KM unique units now correctly appear as trainable at the Krepost when the civ has Bonus #93 (Can build Krepost)",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Custom unique unit pierce armor stat now displays correctly in the in-game unit stats panel",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Idempotency guards added for Imperial Scorpion (#308), Royal Battle Elephant (#309), and Royal Lancer (#310) — prevents data corruption when multiple civs share these bonuses in a single build"
+  ]
+ },
+ {
+  "version": "1.7.3",
+  "date": "2026-07-08",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Custom flag icon now shows correctly in the civilization picker and in-game interface",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #283 (Chemistry/Hand Cannoneer in Castle Age) no longer breaks Bombard Cannons, Bombard Towers, or Cannon Galleons — now mirrors the Bohemian mechanism",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #283 (Chemistry/Hand Cannoneer in Castle Age) Chemistry now correctly unlocks in Castle Age — Castle Age trigger was cloned but not wired correctly"
+  ]
+ },
+ {
+  "version": "1.7.2",
+  "date": "2026-07-06",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Fixed a bug that prevented camel riders from being trainable",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Fixed Bonus #283 - Chemistry/HC in Castle Age"
+  ]
+ },
+ {
+  "version": "1.7.1",
+  "date": "2026-07-04",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Team bonus labels displayed the wrong text in-game and in the builder — team bonuses now read from the correct name list",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Team bonus #30 (Military buildings +5 population room) was silently never applied — now correctly implemented",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #35 (Infantry +20% HP) was allocating dead Castle and Imperial stubs that did nothing — trimmed to the single correct Feudal tech",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #55 (Stable units +1 pierce armor in Castle &amp; Imperial Age) only applied in Imperial Age — Castle Age pierce armor now also fires correctly",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #280 (Folwark replaces the Mill) was allocating 7 extra empty/unrelated techs — trimmed to the correct 4-tech Poles chain",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #300 (Camel Scouts available in Feudal Age) produced a 0-command tech — now uses a direct enable command that correctly unlocks unit 1755",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #26 (TC/Dock work rate per age) had a trailing blank tech — now resolves to a single tech covering all four age variants",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #105 (Economic upgrades −33% food) previously allocated 10 dead stubs — food discount now correctly applies to all 16 standard eco upgrade techs at game start",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Bonus #318 (Start with a Mule Cart) had a blank placeholder tech removed; the actual spawn tech now fires cleanly",
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> Specific mod fix: Elite Organ Gun/Caravel upgrade buttons missing; UT hover showing wrong civ name; Castle UT showing no effect description; Carrack ×2 giving 0 armor instead of +2",
+   "Known limitation noted: Bonus #105 applies the food discount but the 'one age earlier' portion is not yet implemented",
+   "Known limitation noted: Bonuses #81 (no buildings to age up), #283 (Chemistry/HC in Castle Age), and #352 (Siege Engineers in Castle Age) require further coding to accommodate."
+  ]
+ },
+ {
+  "version": "1.67",
+  "date": "2026-06-28",
+  "notes": [
+   "<strong class=\"color-accent-2\">VOICE LINES:</strong> Your selected civs voice lines will now be properly set in-game",
+   "<strong class=\"color-accent-2\">Castle/Wonder Skins:</strong> Your selected castle and wonder skins will be properly set in-game",
+   "After loading the latest version, a popup will show you the most recent changes",
+   "'What's New' page added, reading the latest changelog",
+   "'How it Works' and 'Why' pages added",
+   "Updated Install Instructions"
+  ]
+ },
+ {
+  "version": "1.6",
+  "date": "2026-06-27",
+  "notes": [
+   "Future-Proofing: The app now reads your games' DAT file *and* civ files, preventing future DLC from breaking it.",
+   "All 30 missing team bonuses implemented — full vanilla team bonus coverage achieved (0 unsupported)",
+   "New civ bonus #222: Cows trainable from Mills",
+   "New civ bonus #356: Pastures replace Farms — clones the Khitan mechanic",
+   "Brand New civ bonus #401: Blacksmith attack upgrades also affect building damage (+1 vs buildings per Forging/Iron Casting, +2 per Blast Furnace)",
+   "Bonus #327 ('Blacksmith upgrades scale bonus damage') this would require changing multiple attack values manually for every unit in the game. Marked as 'Unlikely to implement' in Known Limitations",
+   "Team bonus #60 added (Resources last 5% longer)",
+   "Fix: Imperial Skirmisher team bonus (#41) implemented",
+   "Fix: Empty Trade Carts 20% faster implemented"
+  ]
+ },
+ {
+  "version": "1.4",
+  "date": "2026-06-23",
+  "notes": [
+   "Added bonus handlers for unique unit upgrades: Imperial Scorpion (#308), Royal Battle Elephant (#309), Royal Lancer (#310)",
+   "Added bonus #9 (Elite Mercenaries) and #29 (First Crusade) castle/imperial UT support with correct UU substitution",
+   "Added bonus #400: City Walls (researchable Fortified Wall HP upgrade)",
+   "Added bonus #279: Each Monastery tech spawns a free Monk",
+   "Added bonuses #277/#278: Gunpowder units and buildings gain attack/HP from University techs",
+   "Version tracking and auto-update notifications introduced"
+  ]
+ }
+]
