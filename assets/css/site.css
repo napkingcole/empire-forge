@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 
 p { margin: 0 0 1em; }
 
-a { color: var(--crimson); text-decoration: none; }
+a { color: var(--crimson) }
 a:hover { color: var(--crimson-dark); text-decoration: underline; }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -281,7 +281,7 @@ kbd {
 .ef-hero-headline {
   /* An outline that suits Cinzel better than -webkit-text-stroke: eight 1px
      shadows (the four corners alone leave gaps on the straight strokes). */
-  --outline: #D9822B;
+  --outline: #e6cfa5;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   font-weight: 600;
   color: var(--ink);
@@ -570,7 +570,7 @@ kbd {
 /* ── Footer ───────────────────────────────────────────────────────────────── */
 .ef-footer { background: var(--walnut); border-top: 1px solid var(--walnut-border); padding: 2rem 1rem; text-align: center; }
 .ef-footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-bottom: 1rem; }
-.ef-footer-links a { font-size: 0.85rem; color: var(--cream-mid); }
+.ef-footer-links a { font-size: 0.85rem; color: var(--cream-mid); text-decoration: none; }
 .ef-footer-links a:hover { color: var(--gold-light); }
 .ef-footer-links i { margin-right: 0.35em; }
 .ef-footer-copy { font-size: 0.75rem; color: var(--ash); margin: 0; }

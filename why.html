@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Why It Exists
+title: Why It Exists - Empire Forge
 description: "The story behind Empire Forge — why KrakenMeister's civ builder broke, and what Empire Forge does differently."
 permalink: /why/
 ---
@@ -24,7 +24,7 @@ permalink: /why/
         DLC updates kept being released (thankfully), and those assumptions stopped being true.</p>
 
       <h2>The South American biome collision</h2>
-      <p>The most visible breakage came from The Last Chieftains DLC. That update added new environmental units —
+      <p>The most visible breakage, for me, came from The Last Chieftains DLC. That update added new environmental units —
         herdable animals, huntable animals, predators, berry varieties, terrain objects — and the game assigned them
         fresh unit IDs in ranges that happened to overlap with the spare slots KrakenMeister used for custom unique
         units. Maps that worked fine before the DLC would suddenly spawn the wrong thing entirely: instead of berries,
@@ -38,13 +38,10 @@ permalink: /why/
         regenerate my mod. When I wanted more elaborate and crazy civs, I brought in AI: new unique units, aura effects,
         multiple technologies and bonuses, you name it.</p>
       <p>We mainly played on Amazon Tunnel against multiple AIs, which is how I found the problem: six Gaia unique
-        units instead of berries, four or five instead of capybaras. I wrote a script to patch my mod, and my pipeline
+        units instead of berries, four or five other ones instead of capybaras. I wrote a script to patch my mod, and my pipeline
         became: build civs in KrakenMeister's builder, combine them with the vanilla civs, generate the mod, download it,
         apply my own changes, then apply a band-aid DLC fix. It was getting complicated — and after all that editing, I
         was already part of the way to a new civ builder.</p>
-      <p>What really galvanized the decision was a message in the KrakenMeister Discord: someone had worked with Claude
-        to make a working civ builder in a few hours — nothing fancy, just some dropdowns for bonuses and techs. I reached
-        out, and after days and days… nothing. There was only one thing left to do.</p>
 
       <h2>What Empire Forge does differently</h2>
       <p><strong>Zero assumptions about the state of the game.</strong> Empire Forge reads your installed game files every
