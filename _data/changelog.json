@@ -1,5 +1,12 @@
 [
  {
+  "version": "2.6.1",
+  "date": "2026-10-10",
+  "notes": [
+   "<strong class=\"color-accent-2\">BUG FIX:</strong> <strong>Custom bonus targets missing in the Windows app.</strong> The Units tab listed only a handful of units with just two filter buttons, and the Buildings and Techs tabs were empty: the app was missing the file it reads unit, building and tech names from. It now reads them from your own game files, and keeps its own copy as a backup"
+  ]
+ },
+ {
   "version": "2.6.0",
   "date": "2026-10-10",
   "notes": [
