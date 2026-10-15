@@ -9,9 +9,9 @@ Jekyll, published by GitHub Pages from `main`. The look is the app's plaster the
 ## Preview locally
 
     bundle install
-    bundle exec jekyll serve --baseurl /empire-forge
+    bundle exec jekyll serve
 
-then open http://127.0.0.1:4000/empire-forge/
+then open http://127.0.0.1:4000/ (add `--livereload` to refresh the browser as you edit).
 
 ## When the app ships a release
 

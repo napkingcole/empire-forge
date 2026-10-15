@@ -305,7 +305,7 @@ kbd {
 .ef-hero-note { margin-top: 1rem; margin-bottom: 0; font-size: 0.8rem; color: var(--ash); }
 @media (max-width: 600px) {
   .ef-hero { min-height: 0; }
-  .ef-hero-inner { margin: 2rem auto; padding: 1.75rem 1.25rem 1.5rem; }
+  .ef-hero-inner { margin: 2rem auto; padding: 1.75rem 1.25rem 1.5rem; background: rgba(250,246,236,0.8); }
 }
 
 /* Page header band for inner pages */
@@ -445,6 +445,17 @@ kbd {
 .ef-prose ul, .ef-prose ol { padding-left: 1.3rem; }
 .ef-prose li { margin-bottom: 0.4rem; }
 .ef-prose .lead { font-family: var(--font-prose); font-size: 1.25rem; color: var(--ink-mid); }
+/* Commands (extend): one line that scrolls inside its box, never the page. */
+.ef-prose pre {
+  background: var(--parch-mid); border: 1px solid var(--border); border-radius: var(--r-sm);
+  padding: 0.6rem 0.8rem; margin: 0.5rem 0 0.75rem; overflow-x: auto; max-width: 100%;
+}
+.ef-prose pre code { background: none; border: 0; padding: 0; white-space: pre; word-break: normal; }
+.ef-prose blockquote {
+  margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--gold);
+  background: rgba(232,208,144,0.18); border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.ef-prose blockquote p { margin: 0; }
 .ef-card {
   background: var(--parch-light);
   border: 1px solid var(--border);

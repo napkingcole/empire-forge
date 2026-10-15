@@ -43,7 +43,7 @@ permalink: /faq/
 
       <details>
         <summary>Can I play my civs online with friends?</summary>
-        <div><p>Yes — everyone in the lobby needs the same mod installed and enabled. To do this, publish your mod through the game's own mod workshop website.</p></div>
+        <div><p>Yes – everyone in the lobby needs the same mod installed and enabled. To do this, publish your mod through the game's own mod workshop website.</p></div>
       </details>
 
       <details>
@@ -67,7 +67,7 @@ permalink: /faq/
           <ol>
             <li><strong>Antivirus.</strong> Some antivirus tools quietly quarantine new programs, and running as administrator doesn't help. In Windows Security, check <strong>Protection history</strong> and restore the file if it's there.</li>
             <li><strong>Run it from a terminal</strong> so any error stays on screen: open PowerShell in your Downloads folder and run <code>.\AOE2EmpireForge.exe</code>. Post what it says on Discord.</li>
-            <li><strong>The browser didn't open.</strong> The console shows the address it's running on (usually <code>http://127.0.0.1:8080</code>) — open it in your browser yourself.</li>
+            <li><strong>The browser didn't open.</strong> The console shows the address it's running on (usually <code>http://127.0.0.1:8080</code>) – open it in your browser yourself.</li>
           </ol>
         </div>
       </details>
@@ -75,7 +75,7 @@ permalink: /faq/
       <details>
         <summary>It says it can't find my game</summary>
         <div>
-          <p>Empire Forge looks in the usual Steam and Xbox app install folders. If your game is somewhere else — another drive, or a custom library — paste the path to <code>empires2_x2_p1.dat</code> on the upload page. It's inside your game folder at <code>resources\_common\dat\</code>.</p>
+          <p>Empire Forge looks in the usual Steam and Xbox app install folders. If your game is somewhere else – another drive, or a custom library – paste the path to <code>empires2_x2_p1.dat</code> on the upload page. It's inside your game folder at <code>resources\_common\dat\</code>.</p>
           <p>In Steam: right-click the game → <strong>Manage</strong> → <strong>Browse local files</strong> to find the game folder.</p>
         </div>
       </details>
@@ -84,7 +84,7 @@ permalink: /faq/
         <summary>Where are my civs and custom bonuses saved?</summary>
         <div>
           <p>Civs in progress are saved in your browser as you work, and as <code>.civbuilder.json</code> files wherever you save them. Your custom bonus library is in <code>%APPDATA%\EmpireForge</code>.</p>
-          <p>Keep the <code>.civbuilder.json</code> files — they're your civs. A new version of Empire Forge can always rebuild a mod from them.</p>
+          <p>Keep the <code>.civbuilder.json</code> files – they're your civs. A new version of Empire Forge can always rebuild a mod from them.</p>
         </div>
       </details>
     </div>
@@ -94,7 +94,7 @@ permalink: /faq/
 
       <details>
         <summary>My civs play correctly but show the wrong names or descriptions</summary>
-        <div><p>The UI mod isn't winning. In the game's mod menu, <strong>raise the UI mod's priority</strong> — even when it's the only mod you have enabled. Both the data mod and the UI mod must be active together.</p></div>
+        <div><p>The UI mod isn't winning. In the game's mod menu, <strong>raise the UI mod's priority</strong> – even when it's the only mod you have enabled. Both the data mod and the UI mod must be active together.</p></div>
       </details>
 
       <details>
@@ -108,7 +108,7 @@ permalink: /faq/
       </details>
 
       <details>
-        <summary>A game update came out — do I need to rebuild?</summary>
+        <summary>A game update came out – do I need to rebuild?</summary>
         <div><p>Usually, yes: rebuild your mod after a major patch or DLC, so it's made from the new game data. Your civ files don't change; the same Empire Forge reads the updated game.</p></div>
       </details>
     </div>
@@ -118,19 +118,24 @@ permalink: /faq/
 
       <details>
         <summary>Can I add a new civ instead of replacing one?</summary>
-        <div><p>No — each custom civ takes over an existing civ's slot, which you choose when you build. The Chronicles civs (Achaemenids, Athenians, Spartans, Macedonians, Thracians, Puru) can't be replaced, but their bonuses that work with ordinary units are available as cards.</p></div>
+        <div><p>No – each custom civ takes over an existing civ's slot, which you choose when you build. The Chronicles civs (Achaemenids, Athenians, Spartans, Macedonians, Thracians, Puru) can't be replaced, but their bonuses that work with ordinary units are available as cards.</p></div>
       </details>
 
       <details>
         <summary>Why is a bonus I remember missing?</summary>
-        <div><p>Some bonuses can't be made to work properly outside their original civ — "ignores armor", for example, is built into the game engine. Rather than ship a card that does nothing, Empire Forge leaves it out.</p></div>
+        <div><p>Some bonuses can't be made to work properly outside their original civ – "ignores armor", for example, is built into the game engine. Rather than ship a card that does nothing, Empire Forge leaves it out.</p></div>
+      </details>
+
+      <details>
+        <summary>Can I add a bonus or mechanic Empire Forge doesn't have?</summary>
+        <div><p>Yes, on top of your mod. Empire Forge sticks to what most civs need, but you can add your own changes to the mod it builds – villagers building rams, Outposts that explode – with a template script and Empire Forge's modding notes. It needs Python on your computer. See <a href="{{ '/extend/' | relative_url }}">Extend your mod</a>.</p></div>
       </details>
 
       <details>
         <summary>Other limits set by the game engine</summary>
         <div>
           <ul>
-            <li>A building has 24 training buttons — two pages of twelve.</li>
+            <li>A building has 24 training buttons – two pages of twelve.</li>
             <li>A unit can cost at most two resources.</li>
             <li>A few unique techs are run by the game's own scripts and only partly apply to a custom civ (Coiled Serpent Array, Red Cliffs Tactics, Butalmapu).</li>
             <li>Siege Towers have no ranged attack, so they can't be made to fire arrows.</li>

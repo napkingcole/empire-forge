@@ -1,0 +1,91 @@
+---
+layout: default
+title: Extend Your Mod - Empire Forge
+description: "Add your own changes on top of a mod Empire Forge built – villagers building rams, exploding Outposts – with a ready-made template script and a brief for your AI code editor."
+permalink: /extend/
+---
+<header class="ef-page-head">
+  <div class="ef-container">
+    <p class="ef-section-label">Going further</p>
+    <h1>Extend your mod</h1>
+    <p>Your own changes, on top of what Empire Forge builds.</p>
+  </div>
+</header>
+
+<section class="ef-section-plain">
+  <div class="ef-container narrow">
+    <div class="ef-card ef-prose">
+
+      <p style="margin-top:0">Empire Forge covers what most civs need: tech trees, the bonus catalog, custom bonuses,
+        unique units and techs. Some ideas are so specific to you that they are deliberately out of its scope – <em>villagers can build rams</em>,
+        <em>Petards garrison in rams</em>, <em>Outposts explode when destroyed, etc etc</em>. You can still make them: build
+        your civ in Empire Forge, then run a small script of your own on the finished mod. That's exactly how my
+        <a href="https://www.ageofempires.com/mods/details/481225/" target="_blank">Unhinged Empires</a> mod adds its custom unique techs and second unique units.</p>
+
+      <div class="ef-note warn">
+        <p><strong>This is the advanced route.</strong> Empire Forge itself needs no tools. This needs
+          <strong>Python 3.11 or newer</strong> on your computer and some comfort with a terminal – or an AI code
+          editor to do the typing for you. It can't harm your game install: you only edit your mod's own files, and the
+          script keeps a copy of Empire Forge's original.</p>
+      </div>
+
+      <h2>What you need</h2>
+      <ul>
+        <li>A mod you built with Empire Forge, installed in your <code>mods/local/</code> folder.</li>
+        <li><strong>Python 3.11+</strong> from <a target="_blank" href="https://www.python.org/downloads/">python.org</a> – on
+          Windows, tick <em>Add python.exe to PATH</em> in the installer.</li>
+        <li><strong>genieutils-py</strong>, the library that reads and writes the game's data file:
+          <code>pip install genieutils-py==0.1.2</code></li>
+        <li>The <a target="_blank" href="{{ site.repo_url }}/blob/main/extend/post_build_template.py">template script</a> and the
+          <a target="_blank" href="{{ site.repo_url }}/tree/main/llm">modding notes</a> – easiest is
+          <a target="_blank" href="{{ site.repo_url }}">the repository</a>'s <em>Code → Download ZIP</em>.</li>
+        <li>Recommended: an AI code editor (Claude Code, Cursor, GitHub Copilot, …).</li>
+      </ul>
+
+      <h2>Step by step</h2>
+      <ol>
+        <li><strong>Build and install your mod</strong> as usual.</li>
+        <li><strong>Find your civ's name in the data file.</strong> A custom civ keeps the name of the civ whose slot it
+          replaced – your civ in the Britons slot is <code>British</code>. List them:
+          <pre><code>python post_build_template.py "…/mods/local/MyMod-data" --list-civs</code></pre></li>
+        <li><strong>Try the example.</strong> As shipped, the template gives your civ's villagers +15 HP – the same
+          change Loom makes:
+          <pre><code>python post_build_template.py "…/mods/local/MyMod-data" --civ British</code></pre>
+          Start a skirmish with your mod as the data mod and check a villager's HP.</li>
+        <li><strong>Write your own change</strong> in the template's <code>apply_my_changes()</code>. With an AI
+          editor: open the template, paste the brief from the top of the file into the chat, then describe your
+          idea.</li>
+        <li><strong>Run it and test in game.</strong> Run it as often as you like – each run starts again from Empire
+          Forge's original, so nothing applies twice.</li>
+        <li><strong>After rebuilding in Empire Forge</strong>, unzip the new mod over the old one and run your script
+          again. It notices the new file and starts from it.</li>
+      </ol>
+
+      <h2>Briefing an AI</h2>
+      <p>The brief at the top of the template points your AI at Empire Forge's modding notes – everything learned about
+        the game's data file while building Empire Forge, written for exactly this. Then be specific:</p>
+      <blockquote><p><em>Make my civ's Outposts deal 50 damage to nearby enemy units when destroyed. Find a vanilla unit
+        that already damages things around it when it dies, and copy how it does it.</em></p></blockquote>
+      <p>Ask it to explain what it changed and how to check it in game. If it can't find a similar example in the game
+        already, treat that as a warning sign – the engine may not support the idea.</p>
+
+      <h2>Rules that save you hours</h2>
+      <ul>
+        <li><strong>Copy something the game already does.</strong> Nearly every idea has a precedent in the data file.</li>
+        <li><strong>Find Empire Forge's techs by name, never by number</strong> – the numbers change between builds.</li>
+        <li><strong>Keep each effect under ~180 changes</strong> – the game crashes on load near 189.</li>
+        <li><strong>New text needs an existing text id</strong> – the game ignores brand-new ones. Reuse an id from your
+          game's own strings file and put your text in your UI mod's strings file.</li>
+      </ul>
+      <p>The <a target="_blank" href="{{ site.repo_url }}/blob/main/docs/EXTENDING.md">full guide</a> has the details, file locations
+        and a troubleshooting table.</p>
+
+      <h2>Sharing</h2>
+      <p>Your mod is yours to publish; a mention of Empire Forge is appreciated. The template is GPL-3.0 like the rest of
+        Empire Forge, so if you share your script, share it open source too.</p>
+      <p>Stuck, or have an idea that might belong in Empire Forge itself? Ask on
+        <a target="_blank" href="{{ site.discord_server_url }}">Discord</a> or open a <a target="_blank" href="{{ site.issues_url }}">GitHub issue</a>.</p>
+
+    </div>
+  </div>
+</section>

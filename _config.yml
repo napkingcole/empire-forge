@@ -34,7 +34,3 @@ exclude:
   - assets/img/crest.png
   - assets/img/brick.jpg
   - assets/img/stones.jpeg
-  - assets/css/main.css
-  - assets/css/main-warm-castle.css
-  - assets/css/tokens.css
-  - assets/js/main.js
