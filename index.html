@@ -12,10 +12,10 @@ description: "Design custom civilizations for Age of Empires II: Definitive Edit
       architecture and voices – and build it into a real game mod. No programming required.
     </p>
     <div class="ef-hero-actions">
-      <a href="{{ '/download/' | relative_url }}" class="ef-btn ef-btn-primary"><i class="fa-brands fa-windows"></i>Download for Windows</a>
+      {% include get-buttons.html %}
       <a href="{{ '/features/' | relative_url }}" class="ef-btn ef-btn-outline">Take the tour</a>
     </div>
-    <p class="ef-hero-note">Free &amp; open source · Windows 10/11 · Steam and PC Game Pass</p>
+    <p class="ef-hero-note">Free &amp; open source · Now on the Microsoft Store · Steam and PC Game Pass</p>
   </div>
 </section>
 
@@ -116,9 +116,9 @@ description: "Design custom civilizations for Age of Empires II: Definitive Edit
   <h2>Ready to forge your empire?</h2>
   <p>
     Empire Forge is free, open source and runs entirely on your own computer.
-    All you need is Age of Empires II: Definitive Edition on Steam or PC Game Pass.
+    Get it from the Microsoft Store – all you need is Age of Empires II: Definitive Edition on Steam or PC Game Pass.
   </p>
-  <a href="{{ '/download/' | relative_url }}" class="ef-btn ef-btn-primary"><i class="fa-brands fa-windows"></i>Download for Windows – Free</a>
+  {% include get-buttons.html label="Get it free from the Microsoft Store" %}
   <span class="ef-cta-secondary">
     Questions? Join the <a href="{{ site.discord_server_url }}">Empire Forge Discord</a> or read the <a href="{{ '/faq/' | relative_url }}">FAQ</a>.
   </span>

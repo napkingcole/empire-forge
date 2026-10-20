@@ -8,6 +8,6 @@
       <a href="{{ parts[1] | relative_url }}"{% if page.url == parts[1] %} class="active" aria-current="page"{% endif %}>{{ parts[0] }}</a>
       {% endfor %}
     </div>
-    <a href="{{ '/download/' | relative_url }}" class="ef-btn ef-btn-primary ef-nav-cta"><i class="fa-brands fa-windows"></i>Download</a>
+    {% include get-buttons.html label="Get it" github=false class="ef-nav-cta" %}
   </div>
 </nav>

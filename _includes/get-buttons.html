@@ -1,0 +1,18 @@
+{%- comment -%}
+  The "Get Empire Forge" call to action: the Microsoft Store button, with the
+  GitHub exe as a quieter text link beside it.  Every CTA on the site uses this,
+  so the wording and the links change in one place.
+
+  include.label   button text (default "Get it from the Microsoft Store")
+  include.github  false to leave out the GitHub link (the nav bar has no room)
+
+  Until store_url is set the button falls back to the Download page.
+{%- endcomment -%}
+{%- assign label = include.label | default: "Get it from the Microsoft Store" -%}
+{%- if site.store_url != "" -%}{%- assign store_href = site.store_url -%}{%- else -%}{%- assign store_href = '/download/' | relative_url -%}{%- endif -%}
+<span class="ef-get{% if include.class %} {{ include.class }}{% endif %}">
+  <a href="{{ store_href }}" class="ef-btn ef-btn-primary"><i class="fa-brands fa-windows"></i>{{ label }}</a>
+  {%- unless include.github == false %}
+  <a href="{{ site.releases_url }}" class="ef-get-alt"><i class="fa-brands fa-github"></i>or download from GitHub</a>
+  {%- endunless %}
+</span>

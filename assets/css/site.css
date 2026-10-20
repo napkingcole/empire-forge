@@ -196,6 +196,11 @@ kbd {
 .ef-btn-outline:hover { background: var(--crimson); color: #fff; }
 .ef-btn[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
 
+/* Store button + the GitHub exe as a text link beneath it (_includes/get-buttons.html) */
+.ef-get { display: inline-flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+.ef-get-alt { display: inline-flex; align-items: center; gap: 0.45em; font-size: 0.85rem; color: var(--ink-mid); }
+.ef-get-alt:hover { color: var(--crimson); }
+
 /* ── Navbar ───────────────────────────────────────────────────────────────── */
 .ef-nav {
   background: var(--walnut);
@@ -301,7 +306,7 @@ kbd {
   margin: 0 auto 2rem;
   max-width: 540px;
 }
-.ef-hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.ef-hero-actions { display: flex; gap: 1rem; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
 .ef-hero-note { margin-top: 1rem; margin-bottom: 0; font-size: 0.8rem; color: var(--ash); }
 @media (max-width: 600px) {
   .ef-hero { min-height: 0; }
@@ -497,6 +502,7 @@ kbd {
 .ef-dl-card h2 i { color: var(--crimson); }
 .ef-dl-card ul { padding-left: 1.2rem; font-size: 0.93rem; }
 .ef-dl-card .ef-btn { align-self: flex-start; margin-top: auto; }
+.ef-dl-card .ef-get { align-self: flex-start; align-items: flex-start; margin-top: auto; }
 .ef-badge {
   display: inline-block;
   font-family: var(--font-display);

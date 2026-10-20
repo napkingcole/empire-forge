@@ -9,8 +9,9 @@ baseurl: ""
 repo_url: "https://github.com/napkingcole/aoe2-empire-forge"
 releases_url: "https://github.com/napkingcole/aoe2-empire-forge/releases/latest"
 issues_url: "https://github.com/napkingcole/aoe2-empire-forge/issues"
-# Empty until the Store listing is live; the Download page shows "coming soon".
-store_url: ""
+# Every "Get Empire Forge" button points here (_includes/get-buttons.html).
+# No hl/gl parameters, so the Store page opens in the visitor's own language.
+store_url: "https://apps.microsoft.com/detail/9p1wpddqc203"
 contact_email: "aoenapkingcole@gmail.com"
 # Tip jar.  Change the service here; the footer and Download page follow.
 donate_url: "https://ko-fi.com/napkingcole"

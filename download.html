@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Download - Empire Forge
-description: "Download Empire Forge for Age of Empires II: Definitive Edition for Windows – free and open source. Requirements, first-launch help and what to expect."
+title: Get Empire Forge
+description: "Get Empire Forge for Age of Empires II: Definitive Edition from the Microsoft Store or GitHub – free and open source. Requirements, first-launch help and what to expect."
 permalink: /download/
 ---
 <header class="ef-page-head">
   <div class="ef-container">
     <p class="ef-section-label">Free &amp; open source</p>
-    <h1>Download Empire Forge</h1>
-    <p>One file, nothing to install. It needs only Age of Empires II: Definitive Edition on the same PC.</p>
+    <h1>Get Empire Forge</h1>
+    <p>Now on the Microsoft Store. It needs only Age of Empires II: Definitive Edition on the same PC.</p>
   </div>
 </header>
 
@@ -17,35 +17,27 @@ permalink: /download/
     <div class="ef-dl-grid">
 
       <div class="ef-dl-card featured">
-        <span class="ef-badge">Recommended today</span>
-        <h2><i class="fa-brands fa-github"></i>GitHub release</h2>
-        <p>The latest version as a single <code>AOE2EmpireForge.exe</code>. No installer – download it and double-click.</p>
-        <ul>
-          <li>Always the newest release, usually the same day</li>
-          <li>The app tells you when a newer version is out</li>
-          <li>Windows shows a SmartScreen warning the first time – <a href="#smartscreen">here's why and what to click</a></li>
-        </ul>
-        <a class="ef-btn ef-btn-primary" href="{{ site.releases_url }}"><i class="fa-solid fa-download"></i>Download from GitHub</a>
-      </div>
-
-      <div class="ef-dl-card">
-        {% if site.store_url != "" %}
-        <span class="ef-badge">No warnings</span>
-        {% else %}
-        <span class="ef-badge">Coming soon</span>
-        {% endif %}
-        <h2><i class="fa-brands fa-microsoft"></i>Microsoft Store</h2>
-        <p>The same app, installed and updated by the Microsoft Store.</p>
+        <span class="ef-badge">Recommended</span>
+        <h2><i class="fa-brands fa-windows"></i>Microsoft Store</h2>
+        <p>Installed and kept up to date by the Microsoft Store.</p>
         <ul>
           <li>No SmartScreen warning – Microsoft signs it</li>
           <li>Updates arrive automatically</li>
           <li>Uninstall from Windows Settings like any other app</li>
         </ul>
-        {% if site.store_url != "" %}
-        <a class="ef-btn ef-btn-outline" href="{{ site.store_url }}"><i class="fa-brands fa-microsoft"></i>Get it from Microsoft</a>
-        {% else %}
-        <a class="ef-btn ef-btn-outline" aria-disabled="true"><i class="fa-regular fa-clock"></i>In certification</a>
-        {% endif %}
+        {% include get-buttons.html github=false %}
+      </div>
+
+      <div class="ef-dl-card">
+        <span class="ef-badge">Portable</span>
+        <h2><i class="fa-brands fa-github"></i>GitHub release</h2>
+        <p>The same app as a single <code>AOE2EmpireForge.exe</code>. No installer – download it and double-click.</p>
+        <ul>
+          <li>Always the newest release, usually the same day</li>
+          <li>The app tells you when a newer version is out</li>
+          <li>Windows shows a SmartScreen warning the first time – <a href="#smartscreen">here's why and what to click</a></li>
+        </ul>
+        <a class="ef-btn ef-btn-outline" href="{{ site.releases_url }}"><i class="fa-brands fa-github"></i>Download from GitHub</a>
       </div>
 
     </div>
@@ -88,7 +80,14 @@ permalink: /download/
     <p>
       Wary of running an unsigned file? That's healthy. Every line of Empire Forge is public on
       <a href="{{ site.repo_url }}">GitHub</a>, and the exe is built from it by GitHub's own servers – you can see
-      each build in the repository's Actions tab. The Microsoft Store version, once it's out, skips this step entirely.
+      each build in the repository's Actions tab. The Microsoft Store version skips this step entirely.
+    </p>
+
+    <h2 id="switching">Switching from the GitHub download</h2>
+    <p>
+      The exe never installed anything, so moving to the Store version is simple: close its console window, delete
+      <code>AOE2EmpireForge.exe</code>, and install from the Microsoft Store. Your saved civ files open in either version,
+      and mods you've already built stay in the game's mods folder.
     </p>
 
     <h2>What happens when it runs</h2>
