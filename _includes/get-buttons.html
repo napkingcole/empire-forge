@@ -1,6 +1,8 @@
 {%- comment -%}
   The "Get Empire Forge" call to action: the Microsoft Store button, with the
-  GitHub exe as a quieter text link beside it.  Every CTA on the site uses this,
+  GitHub exe as a quieter text link beside it.  That link goes to the Download
+  page rather than straight to GitHub, so exe users read the SmartScreen help
+  before they meet the warning.  Every CTA on the site uses this,
   so the wording and the links change in one place.
 
   include.label   button text (default "Get it from the Microsoft Store")
@@ -13,6 +15,6 @@
 <span class="ef-get{% if include.class %} {{ include.class }}{% endif %}">
   <a href="{{ store_href }}" class="ef-btn ef-btn-primary"><i class="fa-brands fa-windows"></i>{{ label }}</a>
   {%- unless include.github == false %}
-  <a href="{{ site.releases_url }}" class="ef-get-alt"><i class="fa-brands fa-github"></i>or download from GitHub</a>
+  <a href="{{ '/download/' | relative_url }}#github" class="ef-get-alt"><i class="fa-brands fa-github"></i>or download from GitHub</a>
   {%- endunless %}
 </span>
